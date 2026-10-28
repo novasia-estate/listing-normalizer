@@ -1,0 +1,5 @@
+[
+  {"id":"thai-condo-example","priceText":"THB 3,5 млн","areaText":"80","areaUnit":"sqm","numberStyle":"comma"},
+  {"id":"land-example","priceText":"USD 250000","areaText":"1-2-50","areaUnit":"deed","numberStyle":"dot"},
+  {"id":"needs-currency","priceText":"$120000","areaText":"1000","areaUnit":"sqft"}
+]
