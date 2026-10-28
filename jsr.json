@@ -1,0 +1,9 @@
+{
+  "name": "@novasia-estate/listing-normalizer",
+  "version": "1.0.0",
+  "license": "MIT",
+  "exports": "./jsr/mod.ts",
+  "publish": {
+    "include": ["jsr/", "README.md", "LICENSE", "examples/listings.json", "jsr.json"]
+  }
+}

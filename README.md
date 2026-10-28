@@ -22,6 +22,29 @@ console.log(row.normalized);
 
 CommonJS: `const { normalizeListing } = require('novasia-listing-normalizer')`.
 
+### JSR / Deno / web-standard ESM
+
+The JSR distribution uses native TypeScript ESM, with the same parsing rules as
+the npm distribution. It contains no CommonJS imports or runtime dependencies.
+
+```sh
+deno add jsr:@novasia-estate/listing-normalizer
+```
+
+```ts
+import { normalizeBatch } from '@novasia-estate/listing-normalizer';
+console.log(normalizeBatch([
+  {priceText: 'USD 120000', areaText: '80', areaUnit: 'sqm', numberStyle: 'dot'},
+  {priceText: '$120000', areaText: '80', areaUnit: 'sqm'}
+]));
+// One valid row; the unresolved dollar is returned as a row-level error.
+```
+
+API reference is generated from the typed exports. JSR package contents are
+limited to the ESM source, README, MIT license and synthetic example fixture.
+The Node-only filesystem CLI remains available through the npm distribution.
+These are two supported distribution formats of the same library.
+
 ## Batch reports and CLI
 
 `normalizeBatch(array)` preserves row indices and original records. A bad row becomes `{index, ok:false, error, original}` while valid rows continue. At most 10,000 records per batch.
@@ -56,6 +79,7 @@ The SDK shares its tested parsing core with the NovAsia browser normalizer, addi
 
 ```sh
 npm test
+node build-jsr.cjs
 node cli.cjs examples/listings.json
 ```
 
