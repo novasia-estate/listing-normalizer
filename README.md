@@ -68,6 +68,7 @@ Exports: `parseNumber`, `parsePrice`, `convertArea`, `normalizeListing`, `normal
 
 ## Try it and learn more
 
+- [Complete import guide: quick start, parsing rules, API and review workflows](https://novasia-listing-normalizer.readthedocs.io/en/latest/)
 - [Interactive price and area demo](https://tools.novasia.estate/normalizer.html)
 - [NovAsia Estate — property projects and research in Southeast Asia](https://novasia.estate/)
 - [English buyer guides](https://novasia.estate/en/)
